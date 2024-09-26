@@ -6,7 +6,8 @@ import IngredientsInput from "./Components/Ingredients/Input/Input";
 import RecipeSelection from "./Components/Recipes/Selection/RecipeSelection";
 import ActionButton from "./Components/ActionButton/ActionButton";
 import Footer from "./Components/Footer/Footer";
-// const [response, setResponse] = useState(""); // State for chat response
+import Leaf from "./Components/Leaf/leaf"; // Adjust the import path
+// import myImage from '../Leaf.png'; // You don't need this if it's in Leaf.tsx
 
 export default function App() {
   const [userInput, setUserInput] = useState("");
@@ -28,6 +29,7 @@ export default function App() {
 
       <main className="main-container">
         <Koala koalaText={koalaText} />
+        <Leaf /> {/* This will render both the right and left leaves */}
         {currentScreen === 0 ? (
           <div>
             <IngredientsInput
@@ -55,7 +57,6 @@ export default function App() {
             )}
           </div>
         )}
-
       </main>
 
       <Footer />

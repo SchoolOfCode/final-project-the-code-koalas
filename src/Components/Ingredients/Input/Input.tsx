@@ -195,23 +195,30 @@ Remember to format the response as an array of objects.`;
   return (
     <>
       <div>
+        {/* Form to add the ingredients */}
         <form className="input-form" onSubmit={handleAddIngredient}>
+          {/* Label for ingredient input */}
           <label className="label-input" htmlFor="query">
-            Ingredients:
+            Please Enter Your Ingredients:
           </label>
           <input
             value={userInput}
             name="query"
             onChange={handleChange}
+            //Placeholder text in textbox that dissapears when start typing
             placeholder="What ingredients are in your fridge"
             className="user-input"
           />
+          {/* Simple add button to add ingredient when its entered */}
           <button className="input-button" type="submit">
             Add
           </button>
         </form>
-        <div className="ingredients-container">
+        <div>
+          {/* It loops through each item in the ingredients array
+          //It allows us to run a function for each item and return a new array */}
           {ingredients.map((ingredient, index) => (
+            //Gets the css style
             <div key={index} className="ingredients-white-box">
               <span className="ingredient-text">{ingredient}</span>
               <span

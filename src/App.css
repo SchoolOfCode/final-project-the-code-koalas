@@ -44,9 +44,15 @@ body {
   justify-content: space-evenly;
   align-items: center;
   background-color: var(--yellow);
+
+}
+
+.leaf-container {
   background-image: url("../public/leaf.svg");
-  background-repeat: repeat;
-  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 300px;
+  animation: sway 5s ease-in-out infinite;
 }
 
 /* input element */
@@ -148,5 +154,17 @@ body {
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes sway {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0px);
   }
 }
