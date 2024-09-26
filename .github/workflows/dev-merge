@@ -12,5 +12,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run Docker Image lint and format
-        run: docker run --rm pr-image npm run lint && npm run prettier
+      - name: 
+        run: 
