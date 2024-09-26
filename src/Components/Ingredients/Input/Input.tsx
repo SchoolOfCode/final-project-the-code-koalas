@@ -5,7 +5,7 @@ const api_key = import.meta.env.VITE_PUBLIC_GOOGLE_API_KEY;
 
 if (!api_key) {
   throw new Error(
-    "VITE_PUBLIC_GOOGLE_API_KEY is not set in environment variables"
+    "VITE_PUBLIC_GOOGLE_API_KEY is not set in environment variables",
   );
 }
 
@@ -82,7 +82,7 @@ Please ensure the output matches the following format:
         const responseText = result.response.text();
         const responseJson = JSON.parse(responseText);
         setRecipeOutput(responseJson);
-        
+
         console.log("Recipe JSON:", responseJson);
         console.log("Recipe output updated:", recipeOutput);
       } catch (error) {

@@ -14,5 +14,5 @@ export default function ListItem({ recipe_name }: ListItemProps) {
       {/* <p>{recipe_description}</p> */}
       <br />
     </>
-  )
+  );
 }

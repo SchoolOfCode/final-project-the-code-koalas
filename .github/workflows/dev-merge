@@ -1,0 +1,16 @@
+name: Developer Merge
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint-and-format-container:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Docker Image lint and format
+        run: docker run --rm pr-image npm run lint && npm run prettier

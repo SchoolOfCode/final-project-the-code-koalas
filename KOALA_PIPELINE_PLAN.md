@@ -38,7 +38,7 @@ Make flowchart
 
 # Husky
 
-` git commit --no-verify -m "<>" `
+` git commit --no-verify -m "<message>" `
 
 ## Husky and linting 🐨
 
@@ -91,6 +91,8 @@ Make flowchart
 
 ### Steps
 
+## github action pull request
+
 - Create a Github action
   - Create .github folder with a workflows sub folder 🐨
   - Create a yaml file (.yml) for a simple action 🐨
@@ -99,15 +101,21 @@ Make flowchart
   - Test its working!
     - Make changes on feature branch 🐨
     - Commit 🐨
-    - Push to feature branch 
-    - Create pull request🍸
-    - Merge PR🍸
-    - Should echo leo quote🍸
+    - Push to feature branch 🐨
+    - Create pull request to main 🐨
+    - Should see echo within githubactions 🐨
 
-- docker build and docker run in a Github Action 🍸🍸
-  - rename ymlfile🍸
-  - install docker step🍸
-  - docker build step🍸
+## docker
+
+
+- Download and install Docker Desktop for Windows 🐨
+- Verify Docker installation 🐨
+  - Run `docker --version` 🐨
+
+docker build and docker run in a Github Action
+  - create docker-build-run.yml in /workflows 🐨
+  - docker build step (dev) 🐨        
+    - steps
   - docker run step `docker run --rm image_name_here npm run lint && npm run format` 🍸
     - with lint🍸
     - with format🍸
@@ -121,15 +129,9 @@ Make flowchart
 - Set up CD pipeline
   - create prod dockerfile
   - create render webservice
-    - linked to our repe
+    - linked to our repo
     - checking for changes
     - deploy
     - test
   - make to change to code and see if it deploys the change
 
-
-
-CI/CD Pipeline:
-Local Machine: Development branch, precommit check hooks, Commit Code, push
-GitHub: Pull Request, github action checks, Merge devbranch to main
-Production: Render deploy triggered, 

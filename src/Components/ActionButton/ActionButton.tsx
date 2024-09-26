@@ -10,5 +10,4 @@ export default function ActionButton({ text, onClick }: ActionButtonProps) {
       {text}
     </button>
   );
-};
-
+}

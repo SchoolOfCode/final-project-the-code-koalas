@@ -11,11 +11,10 @@ export default function IngredientsOutput({ recipe }: outputProps) {
         <div key={index}>
           <ListItem
             recipe_name={recipeItem.recipe_details.recipe_name}
-          // recipe_description={recipeItem.recipe_details.recipe_description}
+            // recipe_description={recipeItem.recipe_details.recipe_description}
           />
         </div>
       ))}
     </section>
   );
 }
-
